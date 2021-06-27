@@ -9,7 +9,7 @@ addons:
   sonarcloud:
     organization: "marialujan019"
     token:
-      secure: "20f8ea3d855f36f36ad152b8d198efe5c4fc300b"
+      secure: "$SONAR_TOKEN"
 
 script:
   - python -m pytest -v
