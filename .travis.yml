@@ -5,8 +5,15 @@ services:
 
 language: python
 
+addons:
+  sonarcloud:
+    organization: "marialujan019"
+    token:
+      secure: "20f8ea3d855f36f36ad152b8d198efe5c4fc300b"
+
 script:
   - python -m pytest -v
+  - sonar-scanner
 
 notifications:
   slack: 
