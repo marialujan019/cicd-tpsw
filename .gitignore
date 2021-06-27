@@ -1,1 +1,5 @@
+*/pycache
 venv
+
+.idea/
+*.iml
