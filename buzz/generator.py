@@ -9,9 +9,9 @@ verbs = ('acelera', 'mejora', 'realza', 'modeniza', 'impulsa')
 
 def sample(l, n = 1):
     result = random.sample(l, n)
-   # if n == 1:
-   #     return result[0]
-    return result
+    if n == 1:
+        return result[0]
+    #return result
 
 def generate_buzz():
     buzz_terms = sample(buzz, 2)
