@@ -5,8 +5,15 @@ services:
 
 language: python
 
+addons:
+  sonarcloud:
+    organization: "marialujan019"
+    token:
+      secure: "ZdqPQvrfpCuT0cFFB4txi8SYSUarCATdkQRyZdvaPSK5RExkcm2BAFC2cWg4dl9vvud6kaZbYpNysMJwLgr0J9cvH5auRQ2UbFGn8TQgjVYHTsF66gFYY+wBSoFTrkLMOH45T5pXtWNXa7H3u99XPc32tEQzu1k9o6GXKxbk1YgeJU/BonDFYscxWCcYjXJV0dAHxd9SoiS8ymPL0hg41BeYEcLCOW/Vi0N5LSd4sevAQIBBDYt+kM1zLy22pZdDqi7IBAZ9RRtvuLYRud7uUN455JgrjED/YtnK1L8cLShrT4LdKsoKQRKNPFjIv8yPZ/FdMf0NJDn2NEJ7N2hZdO7tvsYluFcxnXnCLiGgNX8iPfSo+QVTlWOEaoBFH59k88/qx0/FLmAh2aVS2qUn8pFdBXiUxWTpGiafBlxWXAeuBC/QBUF6ff0RK33SYsj9GtAv3qiZjunkMS7TwDKrthee6DU7R+F8hyBUoRuq4Vc17i01esG0GxcWo+hYpAz4sMaZn2jypoxoNY0o1FH+dC8WOAnjVdnsEPyqYTgQFSzZN8ilBV8NlgVjggVzr9DSmBBz5q00SGu0TCSY8zGU1rQz+h4AQMU2s7P7P8YsLSkQXJHwWFXaNjdeITZqivi+UJMz1FxLUykn7N/MO3N0uUvuz+I/KAgzxZJPDAiEE08="
+
 script:
   - python -m pytest -v
+  - sonar-scanner
 
 notifications:
   slack: 
